@@ -17,7 +17,7 @@
                             </div>
                             <div class="block-content collapse in">
 								<?php
-								$query = mysqli_query($connection,"select * from estudiantes where estudiante_id = '$get_id'")or die(mysql_error());
+								$query = mysqli_query($connection,"select * from estudiantes where estudiante_id = '$get_id'");
 								$row = mysqli_fetch_array($query);
 								?>
 								<form id="update_student" class="form-signin" method="post">
@@ -56,7 +56,7 @@
 												<select name="student_class" class="span5" required>
 												<option> <?php echo $row['class'];?></option>
 													<?php 
-														$result = mysqli_query($connection,"select * from class ")or die(mysql_error());
+														$result = mysqli_query($connection,"select * from class ");
 														while($row1 = mysqli_fetch_array($result)){
 														$myclass = $row1['class_name'];			
 													?>
