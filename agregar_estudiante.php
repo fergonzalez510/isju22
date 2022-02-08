@@ -44,7 +44,7 @@
 						<div class="span4">
 										</select>
 											<label>Email:</label>
-											<input type="text" class="input-block-level"  name="email"  placeholder="Email" required>
+											<input type="email" class="input-block-level"  name="email"  placeholder="Email" required>
 											
 											<label>Telefono:</label>
 											<input type="text" class="input-block-level"  name="telefono"   placeholder="Telefono" required>
@@ -63,19 +63,18 @@
 							<div class="span4">
 											
 							                <label>Localidad:</label>
-											<input type="text" class="input-block-level"  name="localidad"   placeholder="Localidad" required>							
+												<input type="text" class="input-block-level"  name="localidad"   placeholder="Localidad" required>							
 										    
 											<label>Carrera:</label>
-											<select name="carrera" class="span5" required>
-											<option></option>
-											<option>diseño</option>
-											<option>software</option>
-											
+												<select name="carrera_id" class="span5" required>
+													<option>tec. sup. en desarrollo de software</option>
+													<option>tec. sup. en desarrollo de diseño grafico</option>
 											<?php 
 												$result = mysqli_query($connection,"select * from carrera ")or die(mysql_error());
 												while($row = mysqli_fetch_array($result)){
 												$myclass = $row['carrera_nombre'];			
 											?>
+												
 												
 												<option value="<?php echo $myclass;?>"></option>
 												
