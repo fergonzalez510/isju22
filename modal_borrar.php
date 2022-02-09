@@ -1,8 +1,8 @@
 
 					<!-- borrar estudiante de modal -->
-					<div id="student_delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div id="borrar_estudiante" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 					<h3 id="myModalLabel">&#191;Eliminar registro de estudiante ?</h3>
 					</div>
 					<div class="modal-body">
@@ -11,8 +11,8 @@
 					</div>
 					</div>
 					<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="icon-remove icon-large"></i> Cerrar</button>
-					<button name="delete_student" class="btn btn-danger"><i class="icon-check icon-large"></i> Si</button>
+						<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="icon-remove icon-large"></i> Cerrar</button>
+					<button name="borrar_estudiante" class="btn btn-danger"><i class="icon-check icon-large"></i> Si</button>
 					</div>
 					</div>
 					
@@ -21,7 +21,7 @@
 					<!-- Class delete modal -->
 					<div id="class_delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 					<h3 id="myModalLabel">&#191;Eliminar registro de Curso ?</h3>
 					</div>
 					<div class="modal-body">
@@ -30,7 +30,7 @@
 					</div>
 					</div>
 					<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="icon-remove icon-large"></i> Cerrar</button>
+						<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="icon-remove icon-large"></i> Cerrar</button>
 					<button name="delete_class" class="btn btn-danger"><i class="icon-check icon-large"></i> Si</button>
 					</div>
 					</div>

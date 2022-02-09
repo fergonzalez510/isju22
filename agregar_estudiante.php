@@ -44,16 +44,16 @@
 						<div class="span4">
 										</select>
 											<label>Email:</label>
-											<input type="email" class="input-block-level"  name="email"  placeholder="Email" required>
+											<input type="email" class="input-block-level"  name="email"  placeholder="email" required>
 											
 											<label>Telefono:</label>
 											<input type="text" class="input-block-level"  name="telefono"   placeholder="telefono" required>
 											
 											<label>Fecha de Nacimiento:</label>
-											<input type="date" class="input-block-level"  name="fec_nac" placeholder="domicilio" required>
+											<input type="date" class="input-block-level"  name="fec_nac" placeholder="fec_nac" required>
 											
 											<label>Direccion:</label>
-											<input type="text" Placeholder="Direccion" name="direccion" class="my_message" required>
+											<input type="text" class="input-block-level"  name="direccion"   placeholder="direccion" required>
 
 										</select>	
 						</div>
@@ -72,7 +72,7 @@
 													<?php 
 														$result = mysqli_query($connection,"select * from carrera");
 														while($row = mysqli_fetch_array($result)){
-														$myclass = $row['carrera_nombre'];			
+														$myclass = $row['carrera_id'];			
 													?>															
 														<option value="<?php echo $myclass;?>"></option>						
 													<?php }?>
