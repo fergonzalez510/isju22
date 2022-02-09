@@ -26,10 +26,10 @@
 									<div class="span4">
 												
 											<label>Nombres:</label>
-											<input type="text" class="input-block-level"  name="nombres"   placeholder="Nombres" required>
+											<input type="text" class="input-block-level"  name="nombres"   placeholder="nombres" required>
 											
 											<label>Apellido:</label>
-											<input type="text" class="input-block-level"  name="apellido"  placeholder="Apellido" required>
+											<input type="text" class="input-block-level"  name="apellido"  placeholder="apellido" required>
 											
 											<label>Genero:</label>
 												<select name="genero" class="span5" required>
@@ -44,10 +44,10 @@
 						<div class="span4">
 										</select>
 											<label>Email:</label>
-											<input type="text" class="input-block-level"  name="email"  placeholder="Email" required>
+											<input type="email" class="input-block-level"  name="email"  placeholder="Email" required>
 											
 											<label>Telefono:</label>
-											<input type="text" class="input-block-level"  name="telefono"   placeholder="Telefono" required>
+											<input type="text" class="input-block-level"  name="telefono"   placeholder="telefono" required>
 											
 											<label>Fecha de Nacimiento:</label>
 											<input type="date" class="input-block-level"  name="fec_nac" placeholder="domicilio" required>
@@ -63,24 +63,20 @@
 							<div class="span4">
 											
 							                <label>Localidad:</label>
-											<input type="text" class="input-block-level"  name="localidad"   placeholder="Localidad" required>							
+												<input type="text" class="input-block-level"  name="localidad"   placeholder="localidad" required>							
 										    
 											<label>Carrera:</label>
-											<select name="carrera" class="span5" required>
-											<option></option>
-											<option>diseño</option>
-											<option>software</option>
-											
-											<?php 
-												$result = mysqli_query($connection,"select * from carrera ")or die(mysql_error());
-												while($row = mysqli_fetch_array($result)){
-												$myclass = $row['carrera_nombre'];			
-											?>
-												
-												<option value="<?php echo $myclass;?>"></option>
-												
-									<?php }?>
-								</select>
+												<select name="carrera_id" class="span5" required>
+													<option>tec. sup. en desarrollo de software</option>
+													<option>tec. sup. en desarrollo de diseño grafico</option>
+													<?php 
+														$result = mysqli_query($connection,"select * from carrera");
+														while($row = mysqli_fetch_array($result)){
+														$myclass = $row['carrera_nombre'];			
+													?>															
+														<option value="<?php echo $myclass;?>"></option>						
+													<?php }?>
+												</select>
 									<br>
 									<br>
 									<button class="btn btn-success" name="save"><i class="icon-save icon-large"></i> Guardar </button>	

@@ -16,50 +16,56 @@
                                 <div class="muted pull-right"><a href="estudiantes.php"><i class="icon-arrow-left icon-large"></i> Volver</a></div>
                             </div>
                             <div class="block-content collapse in">
-						<?php
-						$query = mysqli_query($connection,"select * from estudiantes where alumno_id = '$get_id'")or die(mysql_error());
-						$row = mysqli_fetch_array($query);
-						?>
-						<form id="update_student" class="form-signin" method="post">
-						<!-- span 4 -->
-										<div class="span4">
-										<input type="hidden" value="<?php echo $row['alumno_id']; ?>" class="input-block-level"  name="alumno_id" required>
+								<?php
+								$query = mysqli_query($connection,"select * from estudiantes where estudiante_id = '$get_id'");
+								$row = mysqli_fetch_array($query);
+								?>
+								<form id="update_student" class="form-signin" method="post">
+								<!-- span 4 -->
+									<div class="span4">
+											<input type="hidden" value="<?php echo $row['estudiante_id']; ?>" class="input-block-level"  name="estudiante_id" required>
 										
-										<label>Nombres:</label>
-											<input type="text" class="input-block-level"  name="nombres" value="<?php echo $row['nombres']; ?>" required>
-											<label>Segundo Nombre:</label>
-											<input type="text" class="input-block-level"  name="mname"     value="<?php echo $row['middlename']; ?>"     required>
-											<label>Apellidos:</label>
-											<input type="text" class="input-block-level"  name="lname"  value="<?php echo $row['lastname']; ?>"  required>
+											<label>Nombres:</label>
+												<input type="text" class="input-block-level"  name="nombres" value="<?php echo $row['nombres']; ?>" required>
+											
+											<label>Apellido:</label>
+												<input type="text" class="input-block-level"  name="apellido"     value="<?php echo $row['apellido']; ?>"required>
+											
 											<label>Genero:</label>
 												<select name="gender" class="span5" required>
-													<option><?php echo $row['gender']; ?></option>
+													<option><?php echo $row['genero']; ?></option>
 													<option>Masculino</option>
-													<option>FeMasculino</option>
+													<option>Femenino</option>
 												</select>
-										</div>		
-						<div class="span4">
-							<label>Fecha de Nacimiento:</label>
-									<input type="date" class="input-block-level"  name="dob" value="<?php echo $row['dob']; ?>">
-							<label>Direccion:</label>
-									<input type="text" value="<?php echo $row['address']; ?>" name="address" class="my_message" required>
-							<label>Curso:</label>		
-									<select name="student_class" class="span5" required>
-									<option> <?php echo $row['class'];?></option>
-										<?php 
-											$result = mysqli_query($connection,"select * from class ")or die(mysql_error());
-											while($row1 = mysqli_fetch_array($result)){
-											$myclass = $row1['class_name'];			
-									     ?>
-								<option value="<?php echo $myclass;?>"> <?php echo $myclass;?> </option>
-									<?php }?>
-							</select>
+
+											<label>email:</label>
+												<input type="email" class="input-block-level"  name="email"     value="<?php echo $row['email']; ?>"required>	
+									</div>		
+									<div class="span4">
+											
+											<label>Telefono:</label>
+												<input type="text" class="input-block-level"  name="telefono" value="<?php echo $row['telefono']; ?>">
+
+											<label>Fecha de Nacimiento:</label>
+												<input type="date" class="input-block-level"  name="fec_nac" value="<?php echo $row['fec_nac']; ?>">
+										
+											<label>Direccion:</label>
+												<input type="text" value="<?php echo $row['direccion']; ?>" name="direccion" class="my_message" required>
+
+											<label>Curso:</label>		
+												<select name="student_class" class="span5" required>
+												<option> <?php echo $row['class'];?></option>
+													<?php 
+														$result = mysqli_query($connection,"select * from class ");
+														while($row1 = mysqli_fetch_array($result)){
+														$myclass = $row1['class_name'];			
+													?>
+											<option value="<?php echo $myclass;?>"> <?php echo $myclass;?> </option>
+												<?php }?>
+										</select>
 							<dt><label>Transporte:</label></dt>
 											<dd><label class="radio-inline"><input type="radio" name="transport" value="si" checked='true'> Si </label></dd>
 											<dd><label class="radio-inline"><input type="radio" name="transport" value="no"> No</label></dd>
-										
-									<label>Ruta:</label>
-											<input type="text" value="<?php echo $row['route']; ?>"" name="route" class="my_message">
 									
 									<br>
 									<br>
@@ -67,18 +73,20 @@
 						</div>
 						<!--end span 4 -->	
 						<!-- span 4 -->	
-						<div class="span4">
-							<label>Primer Nombre Apoderado:</label>
-							<input type="text" class="input-block-level"  name="gfname" value="<?php echo $row['gfirstname']; ?>" required>
-							<label>Segundo Nombre Apoderado:</label>
-							<input type="text" class="input-block-level"  name="gmname" value="<?php echo $row['gmiddlename']; ?>" required>
-							<label>Apellidos Apoderado:</label>
-							<input type="text" class="input-block-level"  name="glname" value="<?php echo $row['glastname']; ?>" required>
-							<label>Parentezco:</label>
-							<input type="text" class="input-block-level"  name="rship" value="<?php echo $row['rship']; ?>" required>
-							<label>Telefono:</label>
-							<input type="text" class="input-block-level"  name="tel" value="<?php echo $row['tel']; ?>" onkeydown='return(event.which >= 48 && event.which <= 57)
-											|| event.which ==8 || event.which == 46' maxlength ="10" required>
+								<div class="span4">
+											<input type="hidden" value="<?php echo $row['estudiante_id']; ?>" class="input-block-level"  name="estudiante_id" required>
+										
+											<label>Localidad:</label>
+												<input type="text" class="input-block-level"  name="localidad" value="<?php echo $row['localidad']; ?>" required>
+											
+											<label>Carrera:</label>
+												<select name="carrera_id" class="span5" required>
+													<option><?php echo $row['carrera_id']; ?></option>
+													<option>tec. sup. en desarrollo de software</option>
+													<option>tec. sup. en desarrollo de diseño grafico</option>
+												</select>
+												
+								</div>
 						</div>
 						<!--end span 4 -->
 						<div class="span12"><hr></div>		

@@ -3,7 +3,7 @@
 		<table cellpadding="0" cellspacing="0" border="0" class="table" id="example">
 		<div class="pull-right">
 	 	<a href="#" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprimir Lista</a> 
-		<a href="agregar_estudiante.php" class="btn btn-inverse"><i class="icon-plus-sign icon-large"></i> Agregar 			Estudiante</a>
+		<a href="agregar_estudiante.php" class="btn btn-inverse"><i class="icon-plus-sign icon-large"></i> Agregar Estudiante</a>
 		</div>
 		<a data-toggle="modal" href="#borrar_estudiante" id="delete"  class="btn btn-danger" name=""><i class="icon-trash icon-large"></i> Eliminar</a>
 
@@ -39,7 +39,7 @@
 					<td><?php echo $row['fec_nac'];?></td> 
 					<td><?php echo $row['direccion'];?></td>   
 					<td><?php echo $row['localidad'];?></td> 
-					<td><?php echo $row['carrera']; ?></td> 
+					<td><?php echo $row['carrera_id']; ?></td> 
 				
 					<td class="empty" width="30"><input id="optionsCheckbox" class="uniform_on" name="selector[]" type="checkbox" 	value="<?php echo $id; ?>"></td>
 				
