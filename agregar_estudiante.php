@@ -104,7 +104,7 @@
 						type: "POST",
 						url: "guardar_estudiante.php",
 						data: formData,
-						success: function(html){
+						success : function(html){
 							$.jGrowl("Estudiante agregado exitosamente", { header: 'Estudiante Agregado' });
 							window.location = 'estudiantes.php';  
 						}

@@ -103,7 +103,7 @@
 											var formData = $(this).serialize();
 											$.ajax({
 												type: "POST",
-												url: "editar_estudiante.php",
+												url: "actualizar_estudiante.php",
 												data: formData,
 												success: function(html){
 													$.jGrowl("Estudiante actualizado con éxito", { header: 'Estudiante Actualizado' });
