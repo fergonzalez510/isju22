@@ -14,8 +14,8 @@ include('sesion.php');
 	
 	mysqli_query($connection,"insert into actividad_log (nombreusuario,fecha,accion) values('$user_username',NOW(),'borrar estudiante $nombres $apellido')");
 
-	mysqli_query($connection,"DELETE FROM estudiantes where alumno_id ='$id[$i]'");
-	mysqli_query($connection,"DELETE FROM payment_check where alumno_id ='$id[$i]'");
+	mysqli_query($connection,"DELETE FROM estudiantes where estudiante_id ='$id[$i]'");
+	//mysqli_query($connection,"DELETE FROM payment_check where estudiante_id ='$id[$i]'");
 }
 header("location: estudiantes.php");
 }
