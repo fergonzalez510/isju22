@@ -12,12 +12,14 @@
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left"><i class="icon-plus-sign icon-large"></i> Agregar Estudiante</div>
                                 <div class="muted pull-right"><a id="return" data-placement="left" title="Click para volver" href="estudiantes.php"><i class="icon-arrow-left icon-large"></i> Volver</a></div>
-																<script type="text/javascript">
-																$(document).ready(function(){
-																	$('#return').tooltip('show');
-																	$('#return').tooltip('hide');
-																});
-																</script>                          
+																
+										<script type="text/javascript">
+											$(document).ready(function(){
+												$('#return').tooltip('show');
+											 	$('#return').tooltip('hide');
+											});
+										</script> 
+
 						    </div>
                          <div class="block-content collapse in">						
 						<form id="agregar_estudiante" class="form-signin" method="post">
@@ -37,6 +39,15 @@
 													<option>Masculino</option>
 													<option>femenino</option>
 													<option>Sin Especificar</option>
+
+													<?php 
+														$result = mysqli_query($connection,"select * from estudiantes");
+														while($row = mysqli_fetch_array($result)){
+														$myclass = $row['genero'];			
+													?>															
+														<option value="<?php echo $myclass;?>"></option>						
+													<?php }?>
+
 												</select>								
 									</div>
 						<!-- span 4 -->				

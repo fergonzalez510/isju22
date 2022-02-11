@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <!-- Bootstrap -->
-     			<link href="images/logoISJU.png" rel="icon" type="image">
+     		<link href="images/logoISJU.png" rel="icon" type="image">
 			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 			<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 			<link href="bootstrap/css/font-awesome.css" rel="stylesheet" media="screen">

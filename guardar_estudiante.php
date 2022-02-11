@@ -1,5 +1,6 @@
 
 		<?php
+		
 			include('dbcon.php');
 			include('sesion.php');
 		
@@ -17,7 +18,7 @@
 			
 			mysqli_query($connection,"insert into actividad_log (nombreusuario, fecha, accion) values ('$nombreusuario', NOW(), 'Agergar estudiante $nombres $apellido')");
 			
-			$result = mysqli_query($connection,"select * from estudiantes where nombres='$nombres' AND apellido='$apellido' AND telefono='$telefono' ");
+			$result = mysqli_query($connection,"select * from estudiantes where nombres='$nombres' AND apellido='$apellido' AND telefono='$telefono') ");
 			while($row = mysqli_fetch_array($result)){
 					$alumno_id = $row['alumno_id'];
 			}
