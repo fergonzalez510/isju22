@@ -34,20 +34,18 @@
 											<input type="text" class="input-block-level"  name="apellido"  placeholder="apellido" required>
 											
 											<label>Genero:</label>
-												<select name="genero" class="span5" required>
+												<select name="genero_id" class="span5" required>
 													<option></option>
-													<option>Masculino</option>
-													<option>femenino</option>
+													<option>Maculino</option>
+													<option>Femenino</option>
 													<option>Sin Especificar</option>
-
 													<?php 
-														$result = mysqli_query($connection,"select * from estudiantes");
-														while($row = mysqli_fetch_array($result)){
-														$myclass = $row['genero'];			
-													?>															
-														<option value="<?php echo $myclass;?>"></option>						
-													<?php }?>
+														$result1 = mysqli_query($connection,"select * from genero");
+															while($row1 = mysqli_fetch_array($result1)){
+															$myclass1 = $row1['genero_id'];			
+													?>
 
+													<?php }?>
 												</select>								
 									</div>
 						<!-- span 4 -->				
@@ -78,14 +76,16 @@
 										    
 											<label>Carrera:</label>
 												<select name="carrera_id" class="span5" required>
-													<option>tec. sup. en desarrollo de software</option>
-													<option>tec. sup. en desarrollo de diseño grafico</option>
+													<option></option>
+													<option>Tec. Sup. en Desarrollo de Software</option>
+													<option>Tec. Sup. en Desarrollo de Diseño Grafico</option>
+													
 													<?php 
 														$result = mysqli_query($connection,"select * from carrera");
-														while($row = mysqli_fetch_array($result)){
-														$myclass = $row['carrera_id'];			
-													?>															
-														<option value="<?php echo $myclass;?>"></option>						
+															while($row = mysqli_fetch_array($result)){
+															$myclass = $row['carrera_id'];			
+													?>	
+
 													<?php }?>
 												</select>
 									<br>

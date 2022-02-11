@@ -33,7 +33,7 @@
 				<tr>
 					<td><?php echo $row['nombres'];?></td>
 					<td><?php echo $row['apellido'];?></td>
-					<td><?php echo $row['genero'];?></td> 
+					<td><?php echo $row['genero_id'];?></td> 
 					<td><?php echo $row['email'];?></td>
 					<td><?php echo $row['telefono'];?></td> 
 					<td><?php echo $row['fec_nac'];?></td> 
