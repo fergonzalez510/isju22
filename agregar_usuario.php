@@ -65,7 +65,7 @@
 						url: "guardar_usuario.php",
 						data: formData,
 						success: function(html){
-							$.jGrowl("Class Successfully  Added", { header: 'User Added' });
+							$.jGrowl("usuario agregado con exito", { header: 'Usuario Agregado' });
 							window.location = 'usuarios.php';  
 						}
 					});

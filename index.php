@@ -48,7 +48,7 @@
                               success: function(html){
                                if (html == 'true_admin'){
                                 $.jGrowl("Cargando por favor espere......", { sticky: true });
-                                $.jGrowl("bienvenido al Sistema ", { header: 'Acceso Permitido' });
+                                $.jGrowl("Bienvenido al Sistema ", { header: 'Acceso Permitido' });
                               var delay = 1000;
                                 setTimeout(function(){ window.location = 'tablero.php'  }, delay);  
                               }else
