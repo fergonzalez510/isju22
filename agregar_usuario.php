@@ -10,7 +10,7 @@
 										<div class="control-group">
                                           <div class="controls">
 										  <label>Estado</label>
-										  <select name="status" placeholder = "Categoria">
+										  <select name="estado" placeholder = "Categoria">
 												<option></option>
 												<option value ="administrator">Administrador</option>
 												<option value ="secretaria">Secretaria</option>
@@ -25,14 +25,14 @@
 										<div class="control-group">
                                           <div class="controls">
 										  <label>Primer Nombre</label>
-                                           <input class="input focused"  name="fname" id="focusedInput" type="text" placeholder = "Primer Nombre" required>
+                                           <input class="input focused"  name="nombre" id="focusedInput" type="text" placeholder = "Primer Nombre" required>
                                           </div>
                                         </div>
 										
 											<div class="control-group">
                                           <div class="controls">
 										  <label>Apellidos</label>
-                                            <input class="input focused"  name="lname" id="focusedInput" type="text" placeholder = "Apellidos" required>
+                                            <input class="input focused"  name="apellido" id="focusedInput" type="text" placeholder = "Apellido" required>
                                           </div>
                                         </div>
 										
@@ -62,7 +62,7 @@
 					var formData = $(this).serialize();
 					$.ajax({
 						type: "POST",
-						url: "save_user.php",
+						url: "guardar_usuario.php",
 						data: formData,
 						success: function(html){
 							$.jGrowl("Class Successfully  Added", { header: 'User Added' });
