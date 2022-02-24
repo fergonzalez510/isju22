@@ -74,7 +74,7 @@
                                 $.jGrowl("Cargando por favor espere......", { sticky: true });
                                 $.jGrowl("Bienvenido al Sistema", { header: 'Acceso Permitido' });
                               var delay = 1000;
-                                setTimeout(function(){ window.location = 'alumno/tablero.php'  }, delay);  
+                                setTimeout(function(){ window.location = 'alumnos/tablero.php'  }, delay);  
                               }else
                               {
                               $.jGrowl("Por favor revise su Usuario y Contraseña", { header: 'Inicio de Sesion fallido' });
