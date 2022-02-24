@@ -9,7 +9,7 @@
 						
 						<li><a href="add_class.php"><i class="icon-chevron-right icon-large"></i><i class="icon-th-list icon-large"></i> Curso</a></li>
 						
-						<li><a href="notificaciones2/enviarMens.php"><i class="icon-chevron-right icon-large"></i><i class="icon-money icon-large"></i> Enviar Mensaje</a></li>
+						<li><a href="enviarMens.php"><i class="icon-chevron-right icon-large"></i><i class="icon-file icon-large"></i> Enviar Mensaje</a></li>
 						
 						<li><a href="payment_report.php"><i class="icon-chevron-right icon-large"></i><i class="icon-table icon-large"></i> Reporte de Pagos</a></li>
 						
@@ -19,5 +19,6 @@
 						
                     </ul>
 				</center>
+				
             </div>
 		

@@ -11,4 +11,5 @@
 	$result=mysqli_query($conn, $sql2);
 	$count=mysqli_num_rows($result);
 
+	header( 'Location: ../' ) ;
 ?>
